@@ -37,20 +37,20 @@ export const Habilidades: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
         <div>
-          <div className="text-xs font-semibold tracking-widest text-[#2563EB] uppercase mb-3">
+          <div className="text-xs font-tech font-bold tracking-widest text-[#2563EB] uppercase mb-3">
             02 · ECOSISTEMA TÉCNICO
           </div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#111111]">
+          <h2 className="text-4xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
             HABILIDADES
           </h2>
         </div>
-        <p className="text-sm sm:text-base text-[#62666D] max-w-md">
+        <p className="text-sm sm:text-base font-body text-[#62666D] max-w-md">
           Ecosistema integral estructurado por dominios de especialidad analítica, sin porcentajes arbitrarios.
         </p>
       </div>
 
-      {/* Interactive Category Segmented Control Tabs */}
-      <div className="flex items-center gap-1.5 p-1.5 bg-white border border-[#E5E7EB] rounded-xl overflow-x-auto scrollbar-none mb-10 max-w-full">
+      {/* Interactive Category Segmented Control Tabs -> Inter */}
+      <div className="flex items-center gap-1.5 p-1.5 bg-white border border-[#E5E7EB] rounded-xl overflow-x-auto scrollbar-none mb-10 max-w-full font-body">
         <button
           onClick={() => setCategoriaActiva('Todas')}
           className={`px-3.5 py-2 text-xs font-semibold rounded-lg transition-all whitespace-nowrap ${
@@ -96,35 +96,36 @@ export const Habilidades: React.FC = () => {
                     {getIconoCategoria(item.categoria)}
                   </span>
                   <div>
-                    <h3 className="text-base font-bold text-[#111111] group-hover:text-[#2563EB] transition-colors">
+                    {/* Technology Name -> Space Mono 700 */}
+                    <h3 className="text-base font-tech font-bold text-[#111111] group-hover:text-[#2563EB] transition-colors">
                       {item.nombre}
                     </h3>
-                    <div className="text-[11px] text-[#62666D]">
+                    <div className="text-[11px] font-body text-[#62666D]">
                       {item.categoria}
                     </div>
                   </div>
                 </div>
 
                 {item.destacada && (
-                  <span className="text-[10px] font-mono uppercase tracking-wider text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-md font-semibold">
+                  <span className="text-[10px] font-tech font-bold uppercase tracking-wider text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-md">
                     CORE
                   </span>
                 )}
               </div>
 
-              {/* Description */}
-              <p className="text-xs text-[#62666D] leading-relaxed mb-3">
+              {/* Description -> Inter 400 */}
+              <p className="text-xs font-body text-[#62666D] leading-relaxed mb-3">
                 {item.descripcion}
               </p>
 
-              {/* Related Tools / Connectors (Unboxed subtle indicators) */}
+              {/* Related Tools / Connectors -> Space Mono */}
               {item.herramientasRelacionadas && (
                 <div className="pt-2.5 border-t border-slate-100 flex flex-wrap gap-1.5 items-center">
-                  <span className="text-[10px] text-slate-400 font-mono">Conexiones:</span>
+                  <span className="text-[10px] text-slate-400 font-tech">Conexiones:</span>
                   {item.herramientasRelacionadas.map((rel, rIdx) => (
                     <span
                       key={rIdx}
-                      className="text-[11px] font-mono text-slate-600 bg-slate-50 px-1.5 py-0.5 rounded-sm border border-slate-100"
+                      className="text-[11px] font-tech text-slate-600 bg-slate-50 px-1.5 py-0.5 rounded-sm border border-slate-100"
                     >
                       {rel}
                     </span>
@@ -142,17 +143,17 @@ export const Habilidades: React.FC = () => {
           <div className="flex items-start gap-3">
             <Info className="w-5 h-5 text-[#2563EB] shrink-0 mt-0.5" />
             <div>
-              <div className="text-xs font-bold uppercase tracking-wider text-[#2563EB] mb-1">
+              <div className="text-xs font-display font-bold uppercase tracking-wider text-[#2563EB] mb-1">
                 Detalle de Especialidad: {habilidadSeleccionada.nombre}
               </div>
-              <p className="text-sm text-slate-700">
+              <p className="text-sm font-body text-slate-700">
                 {habilidadSeleccionada.descripcion}
               </p>
             </div>
           </div>
           <button
             onClick={() => setHabilidadSeleccionada(null)}
-            className="text-xs font-semibold text-slate-500 hover:text-slate-800 underline shrink-0"
+            className="text-xs font-body font-semibold text-slate-500 hover:text-slate-800 underline shrink-0"
           >
             Cerrar detalle
           </button>

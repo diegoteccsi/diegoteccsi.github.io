@@ -21,7 +21,6 @@ export const Navbar: React.FC = () => {
     { nombre: 'Experiencia', href: '#experiencia' },
     { nombre: 'Educación', href: '#educacion' },
     { nombre: 'Certificaciones', href: '#certificaciones' },
-    { nombre: 'Contacto', href: '#contacto' },
   ];
 
   const handleLinkClick = () => {
@@ -37,23 +36,23 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10 flex items-center justify-between">
-        {/* Brand Zone: Single element with initials wordmark */}
+        {/* Brand Zone: Single element with initials wordmark -> Space Mono */}
         <a
           href="#inicio"
-          className="group flex items-center gap-2 text-base font-bold tracking-tight text-[#111111] hover:text-[#2563EB] transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#2563EB]"
+          className="group flex items-center gap-2 text-base font-tech font-bold tracking-tight text-[#111111] hover:text-[#2563EB] transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#2563EB]"
           aria-label="Ir al inicio"
         >
-          <span className="w-8 h-8 rounded-lg bg-[#111111] text-white flex items-center justify-center font-mono text-xs tracking-wider group-hover:bg-[#2563EB] transition-colors">
+          <span className="w-8 h-8 rounded-lg bg-[#111111] text-white flex items-center justify-center font-tech text-xs tracking-wider group-hover:bg-[#2563EB] transition-colors">
             {perfil.iniciales}
           </span>
-          <span className="hidden sm:inline font-semibold text-sm tracking-tight text-[#111111]">
+          <span className="hidden sm:inline font-tech font-bold text-sm tracking-tight text-[#111111]">
             {perfil.nombre}
           </span>
         </a>
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation Links -> Inter 500 */}
         <nav
-          className="hidden lg:flex items-center gap-7 text-[13px] font-medium text-[#62666D]"
+          className="hidden lg:flex items-center gap-7 text-[13px] font-body font-medium text-[#62666D]"
           aria-label="Navegación principal"
         >
           {navLinks.map((link) => (
@@ -68,11 +67,11 @@ export const Navbar: React.FC = () => {
           ))}
         </nav>
 
-        {/* Primary Action Button */}
+        {/* Primary Action Button -> Inter 600 */}
         <div className="hidden sm:flex items-center gap-3">
           <a
             href="#contacto"
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#111111] text-white text-xs font-semibold hover:bg-[#2563EB] transition-colors whitespace-nowrap shadow-xs"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#111111] text-white font-body text-xs font-semibold hover:bg-[#2563EB] transition-colors whitespace-nowrap shadow-xs"
           >
             <span>Contactar</span>
             <ArrowUpRight className="w-3.5 h-3.5" />

@@ -8,14 +8,14 @@ export const Educacion: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div className="text-xs font-semibold tracking-widest text-[#2563EB] uppercase mb-3">
+          <div className="text-xs font-tech font-bold tracking-widest text-[#2563EB] uppercase mb-3">
             05 · FORMACIÓN ACADÉMICA
           </div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#111111]">
+          <h2 className="text-4xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
             EDUCACIÓN
           </h2>
         </div>
-        <p className="text-sm sm:text-base text-[#62666D] max-w-md">
+        <p className="text-sm sm:text-base font-body text-[#62666D] max-w-md">
           Bases metodológicas y de ingeniería orientadas a la investigación aplicada y la analítica cuantitativa.
         </p>
       </div>
@@ -29,26 +29,30 @@ export const Educacion: React.FC = () => {
           >
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
               <div className="space-y-1">
-                <div className="text-xs font-mono font-semibold text-[#2563EB] tabular-nums">
+                {/* Year -> Space Mono */}
+                <div className="text-xs font-tech font-bold text-[#2563EB] tabular-nums">
                   {item.periodo}
                 </div>
-                <h3 className="text-xl sm:text-2xl font-bold text-[#111111] group-hover:text-[#2563EB] transition-colors">
+                {/* Degree / Program -> Plus Jakarta Sans 700 */}
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-[#111111] group-hover:text-[#2563EB] transition-colors">
                   {item.titulo}
                 </h3>
-                <div className="text-sm font-semibold text-slate-700 flex items-center gap-2 pt-1">
+                {/* Institution -> Plus Jakarta Sans 600 */}
+                <div className="text-sm font-display font-semibold text-slate-700 flex items-center gap-2 pt-1">
                   <GraduationCap className="w-4 h-4 text-[#2563EB]" />
                   <span>{item.institucion}</span>
                 </div>
               </div>
 
               {item.mencion && (
-                <div className="self-start px-3 py-1 bg-slate-50 border border-slate-200 rounded-md text-xs font-mono text-slate-700">
+                <div className="self-start px-3 py-1 bg-slate-50 border border-slate-200 rounded-md text-xs font-tech text-slate-700">
                   {item.mencion}
                 </div>
               )}
             </div>
 
-            <p className="text-sm text-[#62666D] leading-relaxed max-w-3xl">
+            {/* Description -> Inter 400 */}
+            <p className="text-sm font-body text-[#62666D] leading-relaxed max-w-3xl">
               {item.descripcion}
             </p>
           </div>

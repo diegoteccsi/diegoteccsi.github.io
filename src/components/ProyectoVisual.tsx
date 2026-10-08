@@ -32,31 +32,31 @@ export const ProyectoVisual: React.FC<ProyectoVisualProps> = ({ tipo, titulo }) 
           <rect x="30" y="130" width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
           <circle cx="70" cy="155" r="14" fill="#EFF6FF" />
           <path d="M63 155h14M70 148v14" stroke="#2563EB" strokeWidth="2" strokeLinecap="round" />
-          <text x="70" y="195" textAnchor="middle" fill="#64748B" fontSize="10" fontFamily="sans-serif" fontWeight="600">FUENTES</text>
+          <text x="70" y="195" textAnchor="middle" fill="#64748B" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">FUENTES</text>
 
           {/* Node 2: Ingest & Raw (Bronze) */}
           <rect x="180" y="130" width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
           <circle cx="220" cy="155" r="14" fill="#F1F5F9" />
           <circle cx="220" cy="155" r="6" fill="#64748B" />
-          <text x="220" y="195" textAnchor="middle" fill="#64748B" fontSize="10" fontFamily="sans-serif" fontWeight="600">BRONZE</text>
+          <text x="220" y="195" textAnchor="middle" fill="#64748B" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">BRONZE</text>
 
           {/* Node 3A: Transform (Silver) */}
           <rect x="320" y="70" width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
           <circle cx="360" cy="95" r="14" fill="#EFF6FF" />
           <circle cx="360" cy="95" r="6" fill="#3B82F6" />
-          <text x="360" y="135" textAnchor="middle" fill="#3B82F6" fontSize="10" fontFamily="sans-serif" fontWeight="600">SILVER</text>
+          <text x="360" y="135" textAnchor="middle" fill="#3B82F6" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">SILVER</text>
 
           {/* Node 3B: Curated Layer */}
           <rect x="320" y="190" width="80" height="80" rx="12" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
           <circle cx="360" cy="215" r="14" fill="#EFF6FF" />
           <circle cx="360" cy="215" r="6" fill="#3B82F6" />
-          <text x="360" y="255" textAnchor="middle" fill="#3B82F6" fontSize="10" fontFamily="sans-serif" fontWeight="600">TRANSFORM</text>
+          <text x="360" y="255" textAnchor="middle" fill="#3B82F6" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">TRANSFORM</text>
 
           {/* Node 4: Gold / Lakehouse Analytics */}
           <rect x="460" y="120" width="100" height="100" rx="14" fill="#FFFFFF" stroke="#2563EB" strokeWidth="2.5" />
           <rect x="475" y="135" width="70" height="45" rx="6" fill="#EFF6FF" />
           <path d="M485 165l12-14 10 8 18-18" stroke="#2563EB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-          <text x="510" y="205" textAnchor="middle" fill="#0F172A" fontSize="11" fontFamily="sans-serif" fontWeight="700">GOLD / DW</text>
+          <text x="510" y="205" textAnchor="middle" fill="#0F172A" fontSize="10" fontFamily="Space Mono, monospace" fontWeight="700">GOLD / DW</text>
 
           {/* Animated Pulse indicator */}
           <circle cx="360" cy="95" r="18" stroke="#2563EB" strokeWidth="1.5" opacity="0.4" />
@@ -79,22 +79,22 @@ export const ProyectoVisual: React.FC<ProyectoVisualProps> = ({ tipo, titulo }) 
           <circle cx="78" cy="55" r="4" fill="#E2E8F0" />
           <circle cx="91" cy="55" r="4" fill="#E2E8F0" />
 
-          <text x="300" y="59" textAnchor="middle" fill="#64748B" fontSize="11" fontFamily="sans-serif" fontWeight="600">
+          <text x="300" y="59" textAnchor="middle" fill="#64748B" fontSize="10" fontFamily="Space Mono, monospace" fontWeight="700">
             EXECUTIVE DATA COCKPIT & METRICS
           </text>
 
           {/* Metric Cards Top */}
           <rect x="65" y="95" width="135" height="55" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
-          <text x="80" y="115" fill="#64748B" fontSize="10" fontWeight="500">MÉTRICA CLAVE</text>
-          <text x="80" y="138" fill="#0F172A" fontSize="18" fontWeight="700" fontFamily="monospace">98.4%</text>
+          <text x="80" y="115" fill="#64748B" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">MÉTRICA CLAVE</text>
+          <text x="80" y="138" fill="#0F172A" fontSize="16" fontWeight="700" fontFamily="Space Mono, monospace">98.4%</text>
 
           <rect x="220" y="95" width="135" height="55" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
-          <text x="235" y="115" fill="#64748B" fontSize="10" fontWeight="500">VOLUMEN PROCESADO</text>
-          <text x="235" y="138" fill="#2563EB" fontSize="18" fontWeight="700" fontFamily="monospace">+2.4M</text>
+          <text x="235" y="115" fill="#64748B" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">VOLUMEN</text>
+          <text x="235" y="138" fill="#2563EB" fontSize="16" fontWeight="700" fontFamily="Space Mono, monospace">+2.4M</text>
 
           <rect x="375" y="95" width="160" height="55" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
-          <text x="390" y="115" fill="#64748B" fontSize="10" fontWeight="500">EFICIENCIA SLA</text>
-          <text x="390" y="138" fill="#0F172A" fontSize="18" fontWeight="700" fontFamily="monospace">99.9%</text>
+          <text x="390" y="115" fill="#64748B" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">EFICIENCIA SLA</text>
+          <text x="390" y="138" fill="#0F172A" fontSize="16" fontWeight="700" fontFamily="Space Mono, monospace">99.9%</text>
 
           {/* Chart Area Left: Trend Curve */}
           <rect x="65" y="165" width="290" height="120" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
@@ -161,8 +161,8 @@ export const ProyectoVisual: React.FC<ProyectoVisualProps> = ({ tipo, titulo }) 
           <circle cx="220" cy="120" r="22" stroke="#2563EB" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
           <circle cx="410" cy="180" r="22" stroke="#94A3B8" strokeWidth="1.5" strokeDasharray="3 3" opacity="0.6" />
 
-          <text x="120" y="70" fill="#64748B" fontSize="11" fontFamily="sans-serif" fontWeight="600">
-            HIPERPLANO DE CLASIFICACIÓN & CONVERGENCIA
+          <text x="120" y="70" fill="#64748B" fontSize="10" fontFamily="Space Mono, monospace" fontWeight="700">
+            HIPERPLANO DE CLASIFICACIÓN
           </text>
         </svg>
       )}
@@ -179,42 +179,42 @@ export const ProyectoVisual: React.FC<ProyectoVisualProps> = ({ tipo, titulo }) 
 
           {/* DAG Trigger Box */}
           <rect x="80" y="70" width="110" height="45" rx="8" fill="#EFF6FF" stroke="#BFDBFE" strokeWidth="1.5" />
-          <text x="135" y="97" textAnchor="middle" fill="#1D4ED8" fontSize="10" fontWeight="700">TRIGGER: EVENT</text>
+          <text x="135" y="97" textAnchor="middle" fill="#1D4ED8" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">TRIGGER: EVENT</text>
 
           {/* Connection */}
           <path d="M190 92 H245" stroke="#93C5FD" strokeWidth="2" />
 
           {/* Task 1 */}
           <rect x="245" y="70" width="130" height="45" rx="8" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.5" />
-          <text x="310" y="97" textAnchor="middle" fill="#334155" fontSize="10" fontWeight="600">EXTRACT & PARSE</text>
+          <text x="310" y="97" textAnchor="middle" fill="#334155" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">EXTRACT & PARSE</text>
 
           <path d="M375 92 H430" stroke="#93C5FD" strokeWidth="2" />
 
           {/* Task 2 Success */}
           <rect x="430" y="70" width="90" height="45" rx="8" fill="#F0FDF4" stroke="#BBF7D0" strokeWidth="1.5" />
-          <text x="475" y="97" textAnchor="middle" fill="#15803D" fontSize="10" fontWeight="700">VALIDADO</text>
+          <text x="475" y="97" textAnchor="middle" fill="#15803D" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">VALIDADO</text>
 
           {/* Split branch down */}
           <path d="M310 115 V175" stroke="#CBD5E1" strokeWidth="2" />
 
           {/* Branch Task */}
           <rect x="245" y="175" width="130" height="45" rx="8" fill="#F8FAFC" stroke="#E2E8F0" strokeWidth="1.5" />
-          <text x="310" y="202" textAnchor="middle" fill="#334155" fontSize="10" fontWeight="600">LOAD TO ONE-LAKE</text>
+          <text x="310" y="202" textAnchor="middle" fill="#334155" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">LOAD TO ONE-LAKE</text>
 
           <path d="M375 197 H430" stroke="#2563EB" strokeWidth="2" />
 
           {/* Sync Endpoint */}
           <rect x="430" y="175" width="90" height="45" rx="8" fill="#EFF6FF" stroke="#2563EB" strokeWidth="2" />
-          <text x="475" y="202" textAnchor="middle" fill="#1D4ED8" fontSize="10" fontWeight="700">DELTA SYNC</text>
+          <text x="475" y="202" textAnchor="middle" fill="#1D4ED8" fontSize="9" fontFamily="Space Mono, monospace" fontWeight="700">DELTA SYNC</text>
 
-          <text x="80" y="265" fill="#64748B" fontSize="11" fontFamily="sans-serif" fontWeight="600">
-            ORQUESTACIÓN DE FLUJOS & INTEGRACIÓN CONTINUA
+          <text x="80" y="265" fill="#64748B" fontSize="10" fontFamily="Space Mono, monospace" fontWeight="700">
+            ORQUESTACIÓN DE FLUJOS & INTEGRACIÓN
           </text>
         </svg>
       )}
 
       {/* Floating subtle badge in corner */}
-      <div className="absolute top-4 right-4 text-[10px] font-mono uppercase tracking-wider text-slate-500 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-md border border-slate-200 shadow-xs pointer-events-none">
+      <div className="absolute top-4 right-4 text-[10px] font-tech font-bold uppercase tracking-wider text-slate-500 bg-white/90 backdrop-blur-xs px-2.5 py-1 rounded-md border border-slate-200 shadow-xs pointer-events-none">
         CASO DE ESTUDIO
       </div>
     </div>

@@ -65,13 +65,13 @@ export const CustomCursor: React.FC = () => {
       aria-hidden="true"
     >
       {cursorType === 'ver' && (
-        <div className="-translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-[#2563EB] text-white flex items-center justify-center text-[10px] font-bold tracking-widest uppercase shadow-md transition-all duration-200">
+        <div className="-translate-x-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-[#2563EB] text-white flex items-center justify-center font-tech text-[10px] font-bold tracking-widest uppercase shadow-md transition-all duration-200">
           VER
         </div>
       )}
 
       {cursorType === 'arrow' && (
-        <div className="-translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#2563EB] text-white flex items-center justify-center text-sm font-semibold transition-all duration-200">
+        <div className="-translate-x-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#2563EB] text-white flex items-center justify-center font-tech text-sm font-bold transition-all duration-200">
           →
         </div>
       )}

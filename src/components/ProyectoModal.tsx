@@ -50,17 +50,17 @@ export const ProyectoModal: React.FC<ProyectoModalProps> = ({ proyecto, onClose 
           <X className="w-5 h-5" />
         </button>
 
-        {/* Top Meta Header */}
-        <div className="flex items-center gap-3 text-xs text-slate-500 mb-3">
-          <span className="font-mono text-blue-600 font-semibold">{proyecto.numero}</span>
+        {/* Top Meta Header -> Space Mono */}
+        <div className="flex items-center gap-3 text-xs text-slate-500 mb-3 font-tech">
+          <span className="font-bold text-blue-600">{proyecto.numero}</span>
           <span aria-hidden="true">·</span>
-          <span className="font-medium">{proyecto.categoria}</span>
+          <span className="font-bold uppercase tracking-wider">{proyecto.categoria}</span>
           <span aria-hidden="true">·</span>
           <span>CASO DE ESTUDIO</span>
         </div>
 
-        {/* Main Title */}
-        <h2 id="modal-titulo" className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mb-4">
+        {/* Main Title -> Plus Jakarta Sans 800 */}
+        <h2 id="modal-titulo" className="text-2xl sm:text-3xl font-display font-extrabold tracking-tight text-slate-900 mb-4">
           {proyecto.titulo}
         </h2>
 
@@ -69,37 +69,37 @@ export const ProyectoModal: React.FC<ProyectoModalProps> = ({ proyecto, onClose 
           <ProyectoVisual tipo={proyecto.tipoVisual} titulo={proyecto.titulo} />
         </div>
 
-        {/* Summary */}
-        <p className="text-base text-slate-600 leading-relaxed mb-8">
+        {/* Summary -> Inter 400 */}
+        <p className="text-base font-body text-slate-600 leading-relaxed mb-8">
           {proyecto.descripcionCompleta}
         </p>
 
         {/* Detailed Sections: Desafío, Solución, Impacto */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-6 border-y border-slate-100 mb-8">
           <div className="space-y-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">Desafío</h3>
-            <p className="text-sm text-slate-700 leading-normal">{proyecto.desafio}</p>
+            <h3 className="text-xs font-display font-bold uppercase tracking-wider text-slate-400">Desafío</h3>
+            <p className="text-sm font-body text-slate-700 leading-normal">{proyecto.desafio}</p>
           </div>
           <div className="space-y-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">Solución Técnica</h3>
-            <p className="text-sm text-slate-700 leading-normal">{proyecto.solucion}</p>
+            <h3 className="text-xs font-display font-bold uppercase tracking-wider text-slate-400">Solución Técnica</h3>
+            <p className="text-sm font-body text-slate-700 leading-normal">{proyecto.solucion}</p>
           </div>
           <div className="space-y-2">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400">Impacto & Valor</h3>
-            <p className="text-sm text-slate-700 leading-normal">{proyecto.impacto}</p>
+            <h3 className="text-xs font-display font-bold uppercase tracking-wider text-slate-400">Impacto & Valor</h3>
+            <p className="text-sm font-body text-slate-700 leading-normal">{proyecto.impacto}</p>
           </div>
         </div>
 
-        {/* Technologies used */}
+        {/* Technologies used -> Space Mono */}
         <div className="mb-8">
-          <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+          <h3 className="text-xs font-display font-bold uppercase tracking-wider text-slate-400 mb-3">
             Ecosistema Tecnológico
           </h3>
           <div className="flex flex-wrap gap-2">
             {proyecto.tecnologias.map((tech) => (
               <span
                 key={tech}
-                className="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 font-mono"
+                className="px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs font-tech text-slate-700"
               >
                 {tech}
               </span>
@@ -107,15 +107,15 @@ export const ProyectoModal: React.FC<ProyectoModalProps> = ({ proyecto, onClose 
           </div>
         </div>
 
-        {/* Action Buttons */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100">
+        {/* Action Buttons -> Inter */}
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-slate-100 font-body">
           <div className="flex items-center gap-3">
             {proyecto.enlaceRepositorio && (
               <a
                 href={proyecto.enlaceRepositorio}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 text-sm font-medium text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-slate-200 text-sm font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-50 transition-colors"
               >
                 <Github className="w-4 h-4" />
                 <span>Ver Código en GitHub</span>

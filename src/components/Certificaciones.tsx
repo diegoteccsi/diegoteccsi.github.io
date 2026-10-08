@@ -8,14 +8,14 @@ export const Certificaciones: React.FC = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <div className="text-xs font-semibold tracking-widest text-[#2563EB] uppercase mb-3">
+          <div className="text-xs font-tech font-bold tracking-widest text-[#2563EB] uppercase mb-3">
             06 · VALIDACIÓN PROFESIONAL
           </div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-[#111111]">
+          <h2 className="text-4xl sm:text-5xl font-display font-extrabold tracking-tight text-[#111111]">
             CERTIFICACIONES
           </h2>
         </div>
-        <p className="text-sm sm:text-base text-[#62666D] max-w-md">
+        <p className="text-sm sm:text-base font-body text-[#62666D] max-w-md">
           Muro de credenciales y certificaciones oficiales emitidas por las principales organizaciones tecnológicas.
         </p>
       </div>
@@ -28,30 +28,30 @@ export const Certificaciones: React.FC = () => {
             className="group relative p-6 bg-white border border-[#E5E7EB] rounded-2xl transition-all duration-200 hover:border-[#2563EB] hover:-translate-y-1 hover:rotate-0.5 shadow-2xs hover:shadow-xs flex flex-col justify-between"
           >
             <div>
-              {/* Top Row: Issuer & Year */}
+              {/* Top Row: Issuer & Year -> Space Mono */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
                   <span className="p-2 rounded-lg bg-blue-50 text-[#2563EB] group-hover:bg-[#2563EB] group-hover:text-white transition-colors">
                     <ShieldCheck className="w-4 h-4" />
                   </span>
-                  <span className="text-xs font-bold text-slate-900 tracking-wider uppercase font-mono">
+                  <span className="text-xs font-tech font-bold text-slate-900 tracking-wider uppercase">
                     {cert.emisor}
                   </span>
                 </div>
-                <span className="text-xs font-mono text-slate-500 font-semibold tabular-nums">
+                <span className="text-xs font-tech font-bold text-slate-500 tabular-nums">
                   {cert.ano}
                 </span>
               </div>
 
-              {/* Certification Name */}
-              <h3 className="text-base font-bold text-[#111111] group-hover:text-[#2563EB] transition-colors leading-snug mb-2">
+              {/* Certification Name -> Plus Jakarta Sans 700 */}
+              <h3 className="text-base font-display font-bold text-[#111111] group-hover:text-[#2563EB] transition-colors leading-snug mb-2">
                 {cert.nombre}
               </h3>
 
               {/* Category & Credential Code */}
               <div className="text-xs text-slate-500 mb-4 space-y-1">
-                <div>{cert.categoria}</div>
-                <div className="font-mono text-[11px] text-slate-400">
+                <div className="font-body">{cert.categoria}</div>
+                <div className="font-tech text-[11px] text-slate-400">
                   {cert.codigoCredencial}
                 </div>
               </div>
@@ -63,13 +63,13 @@ export const Certificaciones: React.FC = () => {
                 href={cert.enlaceVerificacion}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2563EB] group-hover:underline transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-tech font-bold text-[#2563EB] group-hover:underline transition-colors"
                 aria-label={`Ver credencial oficial de ${cert.nombre}`}
               >
                 <span>VER CREDENCIAL</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
-              <span className="text-[10px] font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-sm font-semibold">
+              <span className="text-[10px] font-tech font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-sm">
                 OFICIAL
               </span>
             </div>

@@ -10,11 +10,11 @@ export const PieDePagina: React.FC = () => {
   };
 
   return (
-    <footer className="py-12 px-6 md:px-10 border-t border-[#E5E7EB] bg-[#F7F8FA] text-xs text-[#62666D]">
+    <footer className="py-12 px-6 md:px-10 border-t border-[#E5E7EB] bg-[#F7F8FA] text-xs font-body text-[#62666D]">
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-        {/* Name & Copyright */}
+        {/* Name & Copyright -> Space Mono for Name, Inter for body */}
         <div className="space-y-1 text-center sm:text-left">
-          <div className="font-bold text-sm text-[#111111]">
+          <div className="font-tech font-bold text-sm text-[#111111]">
             {perfil.nombre}
           </div>
           <div>

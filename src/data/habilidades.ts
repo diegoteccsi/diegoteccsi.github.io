@@ -61,12 +61,6 @@ export const habilidades: HabilidadItem[] = [
     herramientasRelacionadas: ["ggplot2", "dplyr", "RStudio"]
   },
   {
-    nombre: "Bash / Shell",
-    categoria: "Programación",
-    descripcion: "Automatización de tareas en servidor, scripts de orquestación básica y gestión de entornos Linux.",
-    herramientasRelacionadas: ["Cron", "Linux CLI", "SSH"]
-  },
-  {
     nombre: "Git",
     categoria: "Programación",
     destacada: true,
@@ -90,23 +84,10 @@ export const habilidades: HabilidadItem[] = [
     herramientasRelacionadas: ["Delta Lake", "Unity Catalog", "PySpark"]
   },
   {
-    nombre: "Apache Spark",
-    categoria: "Ingeniería de Datos",
-    destacada: true,
-    descripcion: "Procesamiento de datos a gran escala en batch y streaming mediante transformaciones optimizadas con PySpark.",
-    herramientasRelacionadas: ["PySpark", "Spark SQL", "Distributed Computing"]
-  },
-  {
     nombre: "ETL / ELT Pipelines",
     categoria: "Ingeniería de Datos",
     descripcion: "Diseño y orquestación de flujos de extracción, carga y transformación con validación de calidad del dato.",
     herramientasRelacionadas: ["Airflow", "Data Pipelines", "Data Quality"]
-  },
-  {
-    nombre: "dbt",
-    categoria: "Ingeniería de Datos",
-    descripcion: "Transformación analítica modular dentro del data warehouse con control de versiones y pruebas automatizadas.",
-    herramientasRelacionadas: ["SQL Models", "Jinja", "Data Lineage"]
   },
 
   // Nube
@@ -122,12 +103,6 @@ export const habilidades: HabilidadItem[] = [
     categoria: "Nube",
     descripcion: "Almacenamiento y procesamiento escalable con S3, Glue, Redshift y computación en la nube.",
     herramientasRelacionadas: ["S3", "Athena", "Glue"]
-  },
-  {
-    nombre: "Google Cloud",
-    categoria: "Nube",
-    descripcion: "Consultas analíticas a gran escala en BigQuery, Cloud Storage y flujos de datos.",
-    herramientasRelacionadas: ["BigQuery", "Cloud Storage", "Cloud Functions"]
   },
 
   // Ciencia de Datos
@@ -146,7 +121,7 @@ export const habilidades: HabilidadItem[] = [
     herramientasRelacionadas: ["DataFrames", "Vectorized Arrays", "Data Wrangling"]
   },
   {
-    nombre: "Estadística Aplicada",
+    nombre: "Estadística",
     categoria: "Ciencia de Datos",
     descripcion: "Pruebas de hipótesis, inferencia estadística, distribuciones de probabilidad y análisis multivariante.",
     herramientasRelacionadas: ["A/B Testing", "Hypothesis Testing", "Correlation Analysis"]
@@ -186,11 +161,5 @@ export const habilidades: HabilidadItem[] = [
     categoria: "Metodologías",
     descripcion: "Gestión ágil de proyectos en sprints con entregables iterativos, refinamientos continuos y retrospectivas.",
     herramientasRelacionadas: ["Agile Sprints", "Kanban", "Jira"]
-  },
-  {
-    nombre: "Data Governance",
-    categoria: "Metodologías",
-    descripcion: "Definición de glosarios de datos, linaje, estándares de metadatos y políticas de calidad analítica.",
-    herramientasRelacionadas: ["Data Lineage", "Cataloging", "Data Quality SLA"]
   }
 ];
