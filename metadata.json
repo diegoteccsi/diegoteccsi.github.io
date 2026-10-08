@@ -1,0 +1,8 @@
+{
+  "name": "Portafolio de Datos y Tecnología",
+  "description": "Portafolio web profesional personal para Análisis de Datos, Ingeniería de Datos y Ciencia de Datos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
