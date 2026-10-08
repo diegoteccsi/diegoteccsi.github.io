@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowDown, ArrowRight } from 'lucide-react';
+import { ArrowDown, Github, Linkedin } from 'lucide-react';
 import { perfil } from '../data/perfil';
 import { FondoInteractivo } from './FondoInteractivo';
 
@@ -21,7 +21,7 @@ export const Inicio: React.FC = () => {
 
         {/* 2. Rol — elemento secundario */}
         <div className="mb-6 sm:mb-8">
-          <p className="font-display font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[44px] tracking-tight bg-gradient-to-r from-[#34D399] to-[#8B5CF6] bg-clip-text text-transparent inline-block select-none leading-tight">
+          <p className="font-display font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-[44px] tracking-tight bg-gradient-to-r from-[#39BCF8] to-[#8B5CF6] bg-clip-text text-transparent inline-block select-none leading-tight">
             {perfil.rolPrincipal}
           </p>
         </div>
@@ -31,22 +31,43 @@ export const Inicio: React.FC = () => {
           {perfil.resumenHero}
         </p>
 
-        {/* Action Button -> Inter 600 */}
-        <div className="flex items-center justify-center w-full sm:w-auto">
+        {/* Action Button & Secondary Social Links */}
+        <div className="flex flex-col items-center justify-center">
           <a
             href="#proyectos"
             data-cursor="arrow"
-            className="group inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-xl bg-[#111111] text-white font-body font-semibold text-sm hover:bg-[#2563EB] transition-all duration-200 shadow-sm hover:shadow-md hover:-translate-y-0.5"
+            className="group inline-flex items-center justify-center px-8 py-3.5 rounded-xl bg-[#111111] text-white font-body font-semibold text-sm shadow-sm hover:bg-[#2563EB] hover:shadow-md transition-all duration-200 hover:-translate-y-0.5"
           >
-            <span>Explora mi trabajo</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <span>Ver Proyectos</span>
           </a>
+
+          {/* Social Icons (GitHub & LinkedIn) */}
+          <div className="flex items-center justify-center gap-3.5 mt-8 sm:mt-9">
+            <a
+              href="https://github.com/diegoteccsi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-xl border border-[#E5E7EB] bg-white text-[#111111] hover:text-[#2563EB] hover:border-slate-300 hover:bg-slate-50 transition-all duration-200 shadow-2xs hover:shadow-sm hover:-translate-y-0.5"
+            >
+              <Github className="w-5 h-5" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/diego-teccsi/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-xl border border-[#E5E7EB] bg-white text-[#111111] hover:text-[#2563EB] hover:border-slate-300 hover:bg-slate-50 transition-all duration-200 shadow-2xs hover:shadow-sm hover:-translate-y-0.5"
+            >
+              <Linkedin className="w-5 h-5" />
+            </a>
+          </div>
         </div>
 
         {/* Down Scroll Indicator */}
         <a
           href="#sobre-mi"
-          className="mt-14 text-[#62666D] hover:text-[#2563EB] transition-colors p-2 rounded-full"
+          className="mt-10 sm:mt-12 text-[#62666D] hover:text-[#2563EB] transition-colors p-2 rounded-full"
           aria-label="Desplazarse hacia la sección Sobre mí"
         >
           <ArrowDown className="w-4 h-4 animate-bounce opacity-70" />
