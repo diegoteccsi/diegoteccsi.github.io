@@ -4,32 +4,25 @@ Portafolio web profesional interactivo para **Análisis de Datos, Ingeniería de
 
 ---
 
-## ⚡ Solución al problema de "Pantalla en blanco" en GitHub Pages
+## 🚀 Despliegue en GitHub Pages (Solución al error del Action)
 
-### ¿Por qué aparece la pantalla en blanco?
-El archivo `index.html` en la raíz contiene:
-```html
-<script type="module" src="/src/main.tsx"></script>
-```
-El archivo `.tsx` es código fuente en TypeScript/React que los navegadores web **no pueden ejecutar directamente sin compilar**. 
+El error ocurrió porque GitHub Actions intentó buscar un archivo `package-lock.json` que no estaba subido en el repositorio (`Dependencies lock file is not found`), y además la versión de Node 20 arrojó una advertencia de obsolescencia.
 
-Por defecto, GitHub Pages solo sirve archivos estáticos simples si está configurado en "Deploy from a branch". Al no ejecutarse el paso de compilación (`npm run build`), el navegador intenta abrir `/src/main.tsx` y falla con un error de tipo MIME o sintaxis, dejando la pantalla en blanco.
+### Ya está corregido:
+1. Se actualizó el flujo en `.github/workflows/deploy.yml` a **Node 22**.
+2. Se eliminó la dependencia estricta de caché (`cache: 'npm'`).
+3. Se cambió el comando de instalación a `npm install --legacy-peer-deps`, que instala las dependencias sin fallar si falta el lockfile.
+4. Se generó el archivo `package-lock.json` en la raíz del proyecto para que puedas incluirlo en tu repositorio.
 
 ---
 
-## 🚀 Cómo activarlo en GitHub (Solución en 3 pasos)
+### Pasos para actualizar en GitHub:
 
-Ya dejamos configurado el flujo automatizado en `.github/workflows/deploy.yml`. Solo debes habilitarlo en tu repositorio:
-
-1. Entra a tu repositorio en GitHub: `https://github.com/diegoteccsi/<tu-repositorio>`
-2. Haz clic en la pestaña **Settings** (Configuración) en la parte superior.
-3. En el menú lateral izquierdo, haz clic en **Pages**.
-4. En la sección **Build and deployment** > **Source**, cambia la opción:
-   - De: `Deploy from a branch`
-   - A: **`GitHub Actions`**
-5. Haz un commit o push a la rama `main` (o ve a la pestaña **Actions** > **Desplegar Portafolio a GitHub Pages** y pulsa **Run workflow**).
-
-GitHub ejecutará automáticamente `npm run build`, compilará el código y publicará la carpeta `dist/` en tu enlace de GitHub Pages en menos de 1 minuto.
+1. **Sube los cambios actualizados a GitHub**:
+   - Asegúrate de incluir `.github/workflows/deploy.yml` y `package-lock.json`.
+2. Una vez hecho el push a `main`:
+   - El Action se ejecutará automáticamente y compilará con éxito.
+   - O ve a la pestaña **Actions** en tu repositorio, selecciona **Desplegar Portafolio a GitHub Pages** y pulsa **Run workflow**.
 
 ---
 
@@ -37,7 +30,7 @@ GitHub ejecutará automáticamente `npm run build`, compilará el código y publ
 
 ```bash
 # Instalar dependencias
-npm install
+npm install --legacy-peer-deps
 
 # Iniciar servidor local
 npm run dev
