@@ -5,7 +5,7 @@ export const perfil: PerfilData = {
   iniciales: "DT",
   subtitulo: "DATOS • AUTOMATIZACIÓN",
   rolPrincipal: "Especialista en Análisis de Datos, Ingeniería de Datos & Ciencia de Datos",
-  resumenHero: "Profesional multidisciplinario enfocado en transformar datos complejos en soluciones analíticas y pipelines escalables con pensamiento crítico y visión de negocio.]",
+  resumenHero: "Profesional multidisciplinario enfocado en transformar datos complejos en soluciones analíticas y pipelines escalables con pensamiento crítico y visión de negocio.",
   sobreMi: {
     parrafos: [
       "[PÁRRAFO SOBRE MÍ 01: Mi trayectoria profesional combina la ingeniería de datos, el análisis exploratorio y la modelación estadística para resolver problemas estratégicos mediante arquitecturas de datos confiables y tableros de alto impacto.]",
