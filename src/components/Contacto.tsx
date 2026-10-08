@@ -42,13 +42,16 @@ export const Contacto: React.FC = () => {
             {/* Email Card with Quick Copy */}
             <div className="p-7 bg-white border border-[#E5E7EB] rounded-2xl shadow-2xs flex flex-col justify-between space-y-5">
               <div className="space-y-3">
-                <div className="flex items-center gap-2 text-xs font-tech font-bold uppercase tracking-wider text-slate-400">
+                <div className="flex items-center gap-2 text-xs font-display font-bold uppercase tracking-wider text-slate-400">
                   <Mail className="w-4 h-4 text-[#2563EB]" />
                   <span>Correo Electrónico</span>
                 </div>
-                <div className="text-base sm:text-lg font-tech font-bold text-[#111111] break-all">
+                <a
+                  href={`mailto:${perfil.contacto.email}`}
+                  className="block text-base sm:text-lg font-body font-medium sm:font-semibold text-[#111111] hover:text-[#2563EB] transition-colors break-all"
+                >
                   {perfil.contacto.email}
-                </div>
+                </a>
                 <p className="text-xs font-body text-slate-500 leading-relaxed">
                   Canal directo para consultas técnicas, colaboraciones y propuestas de proyectos.
                 </p>
