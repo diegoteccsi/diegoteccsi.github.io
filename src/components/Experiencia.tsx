@@ -3,9 +3,7 @@ import { experiencias } from '../data/experiencia';
 import { Briefcase, ChevronDown, ChevronUp, MapPin } from 'lucide-react';
 
 export const Experiencia: React.FC = () => {
-  const [expandedId, setExpandedId] = useState<string | null>(
-    experiencias.find((e) => e.logros && e.logros.length > 0)?.id || null
-  );
+  const [expandedId, setExpandedId] = useState<string | null>(null);
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
