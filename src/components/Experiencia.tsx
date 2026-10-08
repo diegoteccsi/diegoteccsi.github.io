@@ -3,7 +3,9 @@ import { experiencias } from '../data/experiencia';
 import { Briefcase, ChevronDown, ChevronUp, MapPin } from 'lucide-react';
 
 export const Experiencia: React.FC = () => {
-  const [expandedId, setExpandedId] = useState<string | null>(experiencias[0]?.id || null);
+  const [expandedId, setExpandedId] = useState<string | null>(
+    experiencias.find((e) => e.logros && e.logros.length > 0)?.id || null
+  );
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
@@ -30,6 +32,7 @@ export const Experiencia: React.FC = () => {
       <div className="relative pl-6 sm:pl-10 border-l-2 border-slate-200 ml-3 sm:ml-6 space-y-12">
         {experiencias.map((item) => {
           const isExpanded = expandedId === item.id;
+          const hasLogros = Boolean(item.logros && item.logros.length > 0);
 
           return (
             <div key={item.id} className="relative group">
@@ -65,28 +68,32 @@ export const Experiencia: React.FC = () => {
                   {item.descripcion}
                 </p>
 
-                {/* Toggle Key Deliverables -> Inter 600 */}
-                <button
-                  onClick={() => toggleExpand(item.id)}
-                  className="inline-flex items-center gap-1.5 text-xs font-body font-semibold text-[#2563EB] hover:text-blue-800 transition-colors pt-2 focus-visible:outline-hidden"
-                >
-                  <span>{isExpanded ? 'Ocultar entregables clave' : 'Ver entregables & impacto clave'}</span>
-                  {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
-                </button>
+                {/* Toggle Key Deliverables -> Aparece únicamente si existen contribuciones */}
+                {hasLogros && (
+                  <>
+                    <button
+                      onClick={() => toggleExpand(item.id)}
+                      className="inline-flex items-center gap-1.5 text-xs font-body font-semibold text-[#2563EB] hover:text-blue-800 transition-colors pt-2 focus-visible:outline-hidden"
+                    >
+                      <span>{isExpanded ? 'Ocultar entregables clave' : 'Ver entregables & impacto clave'}</span>
+                      {isExpanded ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
+                    </button>
 
-                {/* Expanded Bullet Points -> Inter 400 */}
-                {isExpanded && (
-                  <div className="pt-3 pb-1 space-y-2 text-xs sm:text-sm font-body text-slate-700 animate-in fade-in duration-200">
-                    <div className="text-[11px] font-display font-bold uppercase tracking-wider text-slate-400 mb-1">
-                      Principales Contribuciones:
-                    </div>
-                    {item.logros.map((logro, lIdx) => (
-                      <div key={lIdx} className="flex items-start gap-2.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] mt-2 shrink-0" />
-                        <span className="leading-relaxed">{logro}</span>
+                    {/* Expanded Bullet Points -> Inter 400 */}
+                    {isExpanded && (
+                      <div className="pt-3 pb-1 space-y-2 text-xs sm:text-sm font-body text-slate-700 animate-in fade-in duration-200">
+                        <div className="text-[11px] font-display font-bold uppercase tracking-wider text-slate-400 mb-1">
+                          Principales Contribuciones:
+                        </div>
+                        {item.logros.map((logro, lIdx) => (
+                          <div key={lIdx} className="flex items-start gap-2.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] mt-2 shrink-0" />
+                            <span className="leading-relaxed">{logro}</span>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
+                    )}
+                  </>
                 )}
 
                 {/* Technologies List -> Space Mono */}

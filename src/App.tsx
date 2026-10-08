@@ -10,6 +10,7 @@ import { Certificaciones } from './components/Certificaciones';
 import { Contacto } from './components/Contacto';
 import { PieDePagina } from './components/PieDePagina';
 import { CustomCursor } from './components/CustomCursor';
+import { BotonVolverArriba } from './components/BotonVolverArriba';
 
 export default function App() {
   return (
@@ -34,6 +35,9 @@ export default function App() {
 
       {/* Clean Footer */}
       <PieDePagina />
+
+      {/* Floating Back to Top Button */}
+      <BotonVolverArriba />
     </div>
   );
 }
