@@ -34,7 +34,7 @@ export const proyectos: ProyectoItem[] = [
   {
     id: "proyecto-03",
     numero: "03",
-    titulo: "MODELO PREDICTIVO & CIENCIA DE DATOS]",
+    titulo: "MODELO PREDICTIVO & CIENCIA DE DATOS",
     categoria: "Ciencia de Datos",
     resumen: "Desarrollo de modelos de Machine Learning para estimación predictiva y detección de patrones a partir de datos históricos.",
     descripcionCompleta: "Aplicación de la metodología CRISP-DM abarcando ingeniería de características, análisis de correlación multivariante, entrenamiento y validación rigurosa de algoritmos predictivos.",
@@ -49,7 +49,7 @@ export const proyectos: ProyectoItem[] = [
   {
     id: "proyecto-04",
     numero: "04",
-    titulo: "AUTOMATIZACIÓN DE PROCESOS & FLUJOS LOW-CODE]",
+    titulo: "AUTOMATIZACIÓN DE PROCESOS & FLUJOS LOW-CODE",
     categoria: "Automatización y Low-Code",
     resumen: "Integración automatizada entre sistemas corporativos y repositorios analíticos mediante orquestación de flujos y alertas inteligentes.",
     descripcionCompleta: "Implementación de flujos de trabajo que capturan eventos en tiempo real, validan entradas de información y sincronizan registros con bases de datos analíticas.",
